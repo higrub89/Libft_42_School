@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+
 
 int	ft_isalpha(int c)
 {
@@ -18,4 +18,14 @@ int	ft_isalpha(int c)
 		return (1);
 	else
 		return (0);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	caracter = 'a';
+	int	is = ft_isalpha(caracter);
+	printf("%d\n", is);
+
 }
