@@ -6,7 +6,7 @@
 #    By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 21:06:26 by rhiguita          #+#    #+#              #
-#    Updated: 2024/01/28 07:06:30 by rhiguita         ###   ########.fr        #
+#    Updated: 2024/02/16 01:46:25 by rhiguita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME = libft.a
 CC = gcc
 AR = ar
 # variable con los flags que se pasaran al compilad
-CCFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 ARFLAGS = -rcs
 
 #el flag ´r´ los directorios que se eliminaran de forma recursiva y la ´f´ indica que no se debera requerir confirmacion.
