@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 06:12:41 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/09 00:08:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/08 19:23:22 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/02/04 19:41:47 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+void	*ft_memset(void *b, int c, size_t n)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
+	unsigned char	*ptr;
+
+	ptr = b;
+	while (n-- > 0)
 	{
-		(*f)(lst->content);
-		lst = lst->next;
+		*ptr = (unsigned char)c;
+		ptr++;
 	}
+	return (b);
 }
 /*
-static void	f(void *content)
-{
-	printf("content: %s\n", (char *)content);
-}
-
-//itera en la lista.
-//Aplica la funcion 'f' en el contenido de cada nodo.
+//Se utiliza para establecer un bloque de memoria con valor especifico.
+//Toma tres argumentos: puntero al bloque de memoria que se va a llenar. 
+//valor con que se va a llenar y el numero de bites.
 int	main(void)
 {
-	t_list	*node1 = ft_lstnew("Hello");
-	t_list	*node2 = ft_lstnew("World");
+	char	block[15];
+	ft_memset(block, 'R', 10);
+	block[10] = '\0';
 
-	ft_lstadd_back(&node1, node2);
-	ft_lstiter(node1, f);
+	printf("Matriz asiganda: %s\n", block);
+	return (0);
 }*/

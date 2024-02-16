@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 06:12:41 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/09 00:08:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/08 15:02:38 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/01/28 09:25:01 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+int	ft_isalpha(int c)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
 /*
-static void	f(void *content)
-{
-	printf("content: %s\n", (char *)content);
-}
-
-//itera en la lista.
-//Aplica la funcion 'f' en el contenido de cada nodo.
 int	main(void)
 {
-	t_list	*node1 = ft_lstnew("Hello");
-	t_list	*node2 = ft_lstnew("World");
+	int	a = 'l';
 
-	ft_lstadd_back(&node1, node2);
-	ft_lstiter(node1, f);
+	int b = ft_isalpha(a);
+	printf("Resultado %d\n", b);
+	return (0);
 }*/

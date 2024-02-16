@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 04:04:19 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/03 21:08:02 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/14 23:44:37 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/02/04 17:13:49 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (lst)
+	unsigned char	*p;
+	size_t			i;
+
+	p = (unsigned char *)s;
+	i = 0;
+	while (i < n)
 	{
-		if (*lst)
-			new->next = *lst;
-		*lst = new;
+		if (p[i] == (unsigned char)c)
+		{
+			return ((char *)s + i);
+		}
+		i++;
 	}
+	return (NULL);
 }
 /*
+//Busca la primera ocurrencia de un byte en una region de Memoria.
 int	main(void)
 {
-	t_list	*existingNode = ft_lstnew("Nodo existente");
+	const char	*str = "Hello world!";
+	char		target = 'w';
 
-	t_list *newNode = ft_lstnew("Nuevo nodo");
-
-	ft_lstadd_front(&existingNode, newNode);
-
-	printf("Resultado: %s\n", (char *)(newNode->content));
+	const char *result = ft_memchr(str, (int)target, 13);
+	printf("Encontrado: %c en la posicion %ld\n", target, result - str);
 	return (0);
 }*/

@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 06:12:41 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/09 00:08:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/14 00:29:59 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/01/28 12:55:15 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+int	ft_tolower(int c)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
+	if (c >= 'A' && c <= 'Z')
 	{
-		(*f)(lst->content);
-		lst = lst->next;
+		c = c + ('a' - 'A');
 	}
+	return (c);
 }
 /*
-static void	f(void *content)
-{
-	printf("content: %s\n", (char *)content);
-}
-
-//itera en la lista.
-//Aplica la funcion 'f' en el contenido de cada nodo.
+//Convierte el caracter Mayuscula a miniscula.
 int	main(void)
 {
-	t_list	*node1 = ft_lstnew("Hello");
-	t_list	*node2 = ft_lstnew("World");
+	char uppercase = 'R';
+	char lowercase = ft_tolower(uppercase);
 
-	ft_lstadd_back(&node1, node2);
-	ft_lstiter(node1, f);
+	printf("Caracter Mayuscula: %c\n", uppercase);
+	printf("Caracter Convertido: %c\n", lowercase);
+	return (0);
 }*/

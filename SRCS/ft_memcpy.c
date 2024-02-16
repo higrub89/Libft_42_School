@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 01:03:21 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/04 01:10:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/14 18:22:32 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/01/28 11:01:46 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	t_list	*head;
+	size_t	i;
+	char	*d;
+	char	*s;
 
-	head = malloc(sizeof(t_list));
-	if (!head)
+	d = (char *)dest;
+	s = (char *)src;
+	i = 0;
+	if (!dest && !src)
+	{
 		return (NULL);
-	head->content = content;
-	head->next = NULL;
-	return (head);
+	}
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }
 /*
-//Crea un nuevo nodo de una lista simple.
+//Se utiliza para copiar un bloque de memoria
+//Desde una ubicacion de origen a una de destino.
 int	main(void)
 {
-	int	data = 42;
-	t_list	*new_elem;
+	char *src = "Bienvenidos a 42Madrid";
+	char dest[25];
 
-	new_elem = ft_lstnew(&data);
-	printf("Data: %d\n", *(int *)(new_elem->content));
+	ft_memcpy(dest, src, 10);
+	dest[10] = '\0'; 
+
+	printf("Cadena copiada: %s\n", dest);
 	return (0);
 }*/

@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 06:12:41 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/09 00:08:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/25 00:25:52 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/01/30 21:34:26 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (!lst || !f)
+	if (!s)
 		return ;
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 /*
-static void	f(void *content)
+//envia el string al FD seguido de un salto de linea.
+int main(void)
 {
-	printf("content: %s\n", (char *)content);
-}
-
-//itera en la lista.
-//Aplica la funcion 'f' en el contenido de cada nodo.
-int	main(void)
-{
-	t_list	*node1 = ft_lstnew("Hello");
-	t_list	*node2 = ft_lstnew("World");
-
-	ft_lstadd_back(&node1, node2);
-	ft_lstiter(node1, f);
+	char	*str = "Bienvenidos!";
+	ft_putendl_fd(str, 1); 
 }*/

@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhiguita <rhiguita@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 06:12:41 by rhiguita          #+#    #+#             */
-/*   Updated: 2024/02/09 00:08:07 by rhiguita         ###   ########.fr       */
+/*   Created: 2024/01/14 16:47:19 by rhiguita          #+#    #+#             */
+/*   Updated: 2024/02/04 20:00:37 by rhiguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+void	ft_bzero(void *s, size_t n)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
+	unsigned char	*p;
+
+	p = s;
+	while (n-- > 0)
 	{
-		(*f)(lst->content);
-		lst = lst->next;
+		*p++ = 0;
 	}
 }
-/*
-static void	f(void *content)
-{
-	printf("content: %s\n", (char *)content);
-}
 
-//itera en la lista.
-//Aplica la funcion 'f' en el contenido de cada nodo.
+/*
+//se utiliza para establecer en cero los primeros n bytes
+//de memoria a los que apunta el puntero s.
 int	main(void)
 {
-	t_list	*node1 = ft_lstnew("Hello");
-	t_list	*node2 = ft_lstnew("World");
+	char	str[50] = "";
 
-	ft_lstadd_back(&node1, node2);
-	ft_lstiter(node1, f);
+	size_t n = sizeof(str);
+
+	ft_bzero(str, n);
+
+	printf("Resultado: %s\n", str);
+	return (0);
 }*/
