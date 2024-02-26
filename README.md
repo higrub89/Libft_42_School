@@ -1,2 +1,8 @@
 # libft
-42_school "Libft"
+La Libft es un proyecto fundamental en el contexto del currículo de 42, diseñado para proporcionar a los estudiantes una comprensión profunda de las funciones básicas de la biblioteca estándar de C (Libc). En este proyecto, los participantes tienen la tarea de implementar sus propias versiones de funciones estándar de C, abordando aspectos esenciales como manipulación de cadenas, gestión de memoria, entrada/salida de archivos y operaciones matemáticas.
+
+La realización del proyecto Libft ha sido una experiencia enriquecedora que me ha proporcionado habilidades fundamentales en programación en C. A lo largo de este proyecto, me sumergí en el desarrollo de mi propia biblioteca personalizada, implementando funciones esenciales de la biblioteca estándar de C (Libc).
+
+Al abordar aspectos clave como la manipulación de cadenas, la gestión de memoria, la entrada/salida de archivos y operaciones matemáticas, gané un profundo entendimiento de cómo funcionan estas funciones básicas a un nivel más interno. Crear mi propia implementación de estas funciones no solo fue un desafío técnico significativo, sino que también me brindó la oportunidad de aplicar y consolidar mis conocimientos en programación en C.
+
+La evolución constante de la Libft a lo largo del currículo de 42 me permitió enriquecerla progresivamente, asegurándome siempre de cumplir con las restricciones específicas de funciones permitidas en cada proyecto subsiguiente. Esta biblioteca personalizada ahora sirve como una sólida base para futuros proyectos, demostrando las habilidades y competencias que he adquirido a lo largo de mi trayectoria en 42.
