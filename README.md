@@ -68,9 +68,3 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |    [ft_atoi](SRCS/ft_atoi.c)    |                                 |                 |
 |  [ft_calloc](SRCS/ft_calloc.c)  |                                 |                 |
 |  [ft_strdup](SRCS/ft_strdup.c)  |                                 |                 |
-
-
-
-|                      Descripción                      |                       Valor retornado                       |
-| :---------------------------------------------------: | :---------------------------------------------------------: |
-| Envía el número `n` al _file descriptor_ especificado | No devuelve ningún valor, ya que su tipo de retorno es void |
